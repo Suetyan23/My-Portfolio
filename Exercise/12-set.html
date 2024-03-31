@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <button class="js-button">Start</button>
+
+    <button onclick="
+    updateAddButton();
+    ">Add to Cart</button>
+
+    <p class="message"></p>
+
+    <button onclick="
+    messages++;
+    displayNotification();
+    ">Add</button>
+
+    <button onclick="
+    if (messages > 0 ){
+      messages--;
+    if (messages === 0) {
+          stopNotification();
+        }
+      }
+    ">Remove</button>
+
+
+    <script>
+      document.querySelector('.js-button')
+      .addEventListener('click', () => {
+        const button = document.querySelector('.js-button');
+          button.innerHTML = 'Loading...';
+          setTimeout(function() {
+            button.innerHTML = 'Finished!';
+          }, 1000);
+      });
+
+      function updateAddButton(){
+        const button1 = document.querySelector('.message')
+        button1.innerHTML = 'Added';
+        
+        setTimeout(function(){
+          button1.innerHTML = '';
+        },2000)
+      }
+
+      
+      let messages = 2;
+      let intervalId;
+
+      let isDisplayingNotification;
+      displayNotification();
+
+      function displayNotification() {
+        if (isDisplayingNotification) {
+          return;
+        }
+
+        isDisplayingNotification = true;
+
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000);
+      }
+
+      function stopNotification() {
+        isDisplayingNotification = false;
+        clearInterval(intervalId);
+        document.title = 'App';
+      }
+   
+
+
+
+
+    </script>
+  </body>
+</html>

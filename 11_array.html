@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+    <style>
+        .todo-grid,
+        .todo-input-grid{
+            display: grid;
+            grid-template-columns: 200px 150px 100px ;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+    .todo-input-grid{
+        margin-bottom: 10px;
+    }
+    </style>
+
+</head>
+
+<body>
+    <p>Todo List Practice 1</p>
+
+    <div class="todo-input-grid">
+        <input class="js-name-input" type="text" placeholder="Todo name">
+        <input type="date" class="js-due-date-input">
+        <button onclick="
+            addTodo();
+        ">Add</button>
+    </div>
+
+    
+
+    <div class="js-todo-list todo-grid" > // 2 class name 
+
+    </div>
+
+    <script>
+        const todoList = [{         //create array to store todos
+            name: 'make dinner',
+            dueDate: '2022-12-22'
+        },{
+            name: 'wash dishes',
+            dueDate: '2022-12-22'
+        }]; 
+
+        renderToDoList();
+
+        function renderToDoList(){
+        let todoListHTML = '';
+
+        todoList.forEach(function(todoObject,index){ 
+            const name = todoObject.name;
+            const dueDate = todoObject.dueDate;
+            const html = `
+                <div>${name}</div>
+                <div> ${dueDate}</div>
+                <button onclick="
+                    todoList.splice(${index},1); 
+                    renderToDoList();
+                ">Delete</button> 
+               `;
+
+            todoListHTML += html; //combine all html together
+        });
+   
+   
+        document.querySelector('.js-todo-list')
+            .innerHTML = todoListHTML;
+        }        
+
+        function addTodo(){   //when we click 'add', get text from textbox
+            const inputElement = document.querySelector('.js-name-input');
+            const name = inputElement.value;
+
+            const dateInputElement = document.querySelector('.js-due-date-input');
+            const dueDate = dateInputElement.value;
+
+            todoList.push ({
+                name,
+                dueDate 
+            });  // add it to array
+
+
+            inputElement.value = ''; // when we click add, textbox become empty
+
+            renderToDoList();
+        }
+
+
+    </script>
+</body>
+</html>

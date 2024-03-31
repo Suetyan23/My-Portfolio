@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*css need target id using #*/
+#game {
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    margin: auto;
+    background-image: url(flappyBirdBackground.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#block {
+    height: 500px;
+    width: 50px;
+    background-color: green;
+    position: relative;
+    left: 400px;
+    animation: block 3s infinite linear;
+    overflow: hidden;
+}
+
+@keyframes block {
+    0% {
+        left: 400px
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-color: lightgreen;
+    position: relative;
+    left: 400px;
+    animation: block 3s infinite linear;
+    top: -500px;
+}
+
+#character {
+    position: absolute;
+    top: 100px;
+}
+
+#score {
+    font-size: xx-large;
+    text-align: center;
+    background-color: bisque;
+}
