@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web class</title>
+
+    <style>
+       body{background-color: rgb(127, 180, 255);}
+       h1{font-size: large; font-style: italic; text-align: center;}
+       p{color: deeppink;}
+    </style>
+
+    <style>
+        .city{background-color: tomato; border: 2px solid black; color: white; margin: 20px; padding: 20px;}
+    </style>
+
+</head>
+
+
+<body>
+    <h1>Chang Suet Yan</h1>
+    <h2>Personal information</h2>
+    <h3>COntact</h3>
+    <h4>Hobbies</h4>
+    <h5>Others</h5>
+    <h6>Sign</h6>
+
+<p style="color: blueviolet;"This is a purple paraggraph>Suet Yan is gorgeous</p>
+<b>This text is bold.</b><br>
+<strong>This text is important.</strong><br>
+
+<a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+<img src="/Users/suetyan/Documents/HTML & CSS/image/about.jpg" alt="Web" width="200" height="100">
+
+<!--Unordered list -->
+<ul>
+    <li>Burger</li>
+    <li>Ice cream</li>
+    <li>Donut</li>
+</ul>
+<!--Ordered list-->
+<ol>
+    <li>Burger</li>
+    <li>Ice cream</li>
+    <li>Donut</li>
+</ol>
+<!--Description list-->
+<dl>
+    <dt>Burger</dt>
+    <dd>Beef burger</dd>
+
+    <dt>Ice cream</dt>
+    <dd>Chocolate, Strawberry, Vanila</dd>
+
+    <dt>Donut</dt>
+    <dd>Cinnamon donut</dd>
+</dl>
+
+<!--Table-->
+<table border="1">
+    <caption>Student marks</caption>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Marks</th>
+    </tr>
+
+    <tr>
+        <td>Karen</td>
+        <td>Lee</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>Gordon</td>
+        <td>Lee</td>
+        <td>80</td>
+    </tr>
+
+    <tr>
+        <td colspan="2">Total</td>
+        <td>110</td>
+    </tr>
+</table><br>
+
+<!--form-->
+<form action="" method="get">
+    <fieldset>
+        <legend>Information</legend>
+    <input type="hidden" value="Yan">
+    <div>
+        <label for="">Username</label>
+       <select name="username" id="username">
+            <option value="Chang">Chang</option>
+            <option value="Suet">Suet</option>
+            <option value="Yan">Yan</option>
+       </select>
+    </div><br>
+
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="pass" required placeholder="Enter a strong Password" minlength="10" maxlength="20">
+    </div><br>
+
+    <div>
+        <label for="birth">Birthday</label>
+        <input type="date" id="birth" name="birth" autofocus>  /*autofocus attribute was here*/
+    </div><br>
+
+    <div>
+        <label for="">Email</label>
+        <input type="email" value="y@sunway.my" name="mail" disabled> 
+    </div><br>
+
+    <div>
+        <label for="">Mobile Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="016-8822981">
+        <small>Format:012-3456789r</small>
+    </div><br>
+
+    <div>
+        <label for="">color</label>
+        <input type="color" name="color">
+    </div><br>
+
+    <div>
+        <label for="">Range</label>
+        <input type="range" name="range" min="20" max="100" step="20">
+    </div><br>
+
+    <div>
+        <label for="">Number</label>
+        <input type="number" name="num" min="10" max="90" step="5rr">
+    </div><br>
+
+    <div>
+        <input type="reset" value="reset">
+        <input type="submit" value="save">
+    </div>
+</form>
+</fieldset><br>
+
+<!--checkbox-->
+<form action="">
+    <div>
+        <input id="win1" type="checkbox" name="os" value="Window" checked>
+        <label for="win1">Window</label>
+    </div><br>
+
+    <div>
+        <input id="mac1" type="checkbox" name="os" value="Mac" checked>
+        <label for="mac1">Mac</label>
+    </div><br>
+
+    <div>
+        <input id="lin1" type="checkbox" name="os" value="Linux" checked>
+        <label for="lin1">Linux</label>
+    </div><br>
+</form>
+
+<div class="city">
+    <h2>London</h2>
+    <p>London is the capital of England.</p>
+    </div> 
+    
+    <div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+    </div>
+    
+    <div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <iframe src="/Users/suetyan/Documents/Chang Suet Yan CV.pdf" height="200" width="300">Resume</iframe><br>
+
+<!--button-->
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <p id="demo">Hello!!</p>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="Hello Java Script!"
+        }
+    </script><br>
+
+    <button type="button" onclick="alert('Hello')">Click Me</button><br>
+<!--text area-->
+<textarea name="Text" id="" cols="30" rows="10"></textarea>
+
+
+<!--JAVA SCRIPT CONTENT GOES HERE AND SHOULD START WITH SCRIPT-->
+<script>
+/* variable = let x=10
+constant = const y=5*/
+
+// "string" = text
+</script>
+
+
+<script>
+    alert('Hello World')
+</script>
+
+
+</body>
+</html>
