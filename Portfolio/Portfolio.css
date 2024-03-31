@@ -324,7 +324,21 @@ footer {
     height: 300px;
 }
 
+.tooltip {
+    display: inline-block;
+    background-color: rgb(151, 149, 149);
+    color: black;
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
 .project-title {
+    padding-top: 20px;
     font-family: "Workbench", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;

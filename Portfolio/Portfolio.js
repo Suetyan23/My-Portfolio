@@ -75,3 +75,15 @@ const observer = new IntersectionObserver((entries) => {
 
 let hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+const flappyBirdImage = document.getElementById('flappyBirdImage');
+const flappyBirdTooltip = document.getElementById('flappyBirdTooltip');
+
+// Add event listeners to show/hide the tooltip
+flappyBirdImage.addEventListener('mouseenter', () => {
+    flappyBirdTooltip.style.opacity = '1';
+});
+
+flappyBirdImage.addEventListener('mouseleave', () => {
+    flappyBirdTooltip.style.opacity = '0';
+});
