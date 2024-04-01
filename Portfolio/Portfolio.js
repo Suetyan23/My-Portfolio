@@ -76,14 +76,18 @@ const observer = new IntersectionObserver((entries) => {
 let hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-const flappyBirdImage = document.getElementById('flappyBirdImage');
-const flappyBirdTooltip = document.getElementById('flappyBirdTooltip');
+let projects = document.querySelectorAll('.project1');
 
-// Add event listeners to show/hide the tooltip
-flappyBirdImage.addEventListener('mouseenter', () => {
-    flappyBirdTooltip.style.opacity = '1';
-});
+projects.forEach(project => {
+    let gitHubIcon = project.querySelector('.fa-github');
+    let gitHubTooltip = project.querySelector('.tooltip');
 
-flappyBirdImage.addEventListener('mouseleave', () => {
-    flappyBirdTooltip.style.opacity = '0';
+    // Add event listeners to show/hide the tooltip
+    gitHubIcon.addEventListener('mouseenter', () => {
+        gitHubTooltip.style.opacity = '1';
+    });
+
+    gitHubIcon.addEventListener('mouseleave', () => {
+        gitHubTooltip.style.opacity = '0';
+    });
 });
