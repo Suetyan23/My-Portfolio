@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('About').scrollIntoView();
 });
@@ -28,8 +29,12 @@ button.click();
 
 
 function openPDF() {
-    window.location.href = "image/Chang Suet Yan CV.pdf"
+    window.location.href = "Chang Suet Yan CV.pdf"
 }
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
